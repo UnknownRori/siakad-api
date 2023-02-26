@@ -4,7 +4,9 @@
 
 # Design
 
-*It will soon be added, the draft will be available on figma
+It's still on design process, as you know I'm a backend developer not frontend developer
+
+<https://www.figma.com/file/Oiy1EjRStvLyX7Mxwe4j5h/Siakad?node-id=12%3A1461&t=V6cmZnTmNPJw3xoB-1>
 
 # 🛠️ Development & Running
 

@@ -12,7 +12,22 @@ It's still on design process, as you know I'm a backend developer not frontend d
 
 ```bash
 # git clone this repository
-> git clone https://github.com/UnknownRori/siakad
+> git clone https://github.com/UnknownRori/siakad-api
+
+# enter to the cloned directory
+> cd siakad-api
+
+# install Laravel's dependency
+> composer install
+
+# generate Laravel secret key and JWT secret key
+> php artisan key:generate && php artisan jwt:secret
+
+# migrate database
+> php artisan migrate:fresh --seed
+
+# run local development server
+> php artisan serve
 ```
 
 # 🌟 Contribution

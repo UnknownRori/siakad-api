@@ -1,23 +1,17 @@
 <?php
 
-namespace App\Enum;
+namespace App\Enums;
+
+use App\Traits\EnumToArray;
 
 enum Role: string
 {
+    use EnumToArray;
+
     case Admin          = "Admin";
     case Supervisor     = "Supervisor";
     case Lecturer       = "Lecturer";
     case Student        = "Student";
-
-    /**
-     * Return an ["Admin", "Supervisor", "Lecturer", "Siswa"]
-     *
-     * @return array<string>
-     */
-    public static function toArray(): array
-    {
-        return array_map(fn (Role $role) => $role->name, Role::cases());
-    }
 
 
     public function isStudent(): bool

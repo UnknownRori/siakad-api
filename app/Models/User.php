@@ -11,6 +11,8 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use App\Enums\Role;
+use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable implements JWTSubject
 {
@@ -65,5 +67,12 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+    public function password(): Attribute
+    {
+        return Attribute::make(
+            set: fn (string $plain) => Hash::make($plain),
+        );
     }
 }

@@ -17,15 +17,11 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        // Todo : Make service to generate student_code and lecturer_id
         for ($i = 0; $i < 4; $i++) {
-            User::factory()->create([
-                'student_code' => Str::random(10),
-            ]);
+            User::factory()->create();
         }
 
         User::factory()->create([
-            'lecturer_code' => Str::random(10),
             'role' => Role::Lecturer,
         ]);
 
